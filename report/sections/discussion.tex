@@ -1,0 +1,11 @@
+\section{Discussion}
+
+Of the eight influential mutations identified in this project, it is promising that five of them have been shown to influence susceptibility in previous studies. For the remaining three mutations, it is possible that the analysis incorrectly reported these positions as influential (i.e., a false positive). It could also be that these mutations do, in fact, abolish interaction between the SARS-CoV-2 spike protein and its target, and that they have yet to be identified in a published analysis of sequence or structure.
+
+\subsection{Considerations for Future Work}
+
+A primary restriction of this project was the limited amount of data available about species' susceptibilities to the virus; SARS-CoV-2 is ever-topical and more information about spike protein and ACE2 interaction is still surfacing. More samples of species known to be susceptible would increase the set of non-inhibiting mutations in the algorithm, possibly producing fewer false positives. A broader range of mammal species (more separated phylogenetically) could also help reduce the number of false positives.
+
+Another consideration is the effect of mutations in consecutive sites. This analysis identified position 83 as crucial, but \textcite{Li} and \textcite{LiQin} have shown that it is the mutation in sites 82-84 together holding an influence over the susceptibility. The analysis could involve a more complex algorithm to try to identify residues that are only influential when mutating together.
+
+It's also important to consider that the issue of susceptibility is not binary: mutations in the ACE2 sequence can increase, inhibit, or abolish interaction with the spike protein \cite{UniProt} - not just abolish, as this study assumed. It would be challenging to perform an analysis that incorporated degree of interaction without more quantitative data about species' susceptibility.

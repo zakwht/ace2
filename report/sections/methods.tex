@@ -1,0 +1,19 @@
+\section{Methods}
+
+\subsection{Data}
+
+Twenty-five angiotensin-converting enzyme 2 sequences with known susceptibility to the SARS-CoV-2 spike protein were collected from the NCBI\footnote{\url{https://www.ncbi.nlm.nih.gov/protein}} and the UniProt\footnote{\url{https://www.uniprot.org/uniprot}} protein databases. This included the sequences for twelve mammal host species established as susceptible, and six mammal host species considered insusceptible.
+
+\input{content/species}
+
+Each of the mammal sequences was compared with the human sequence using the Needleman-Wunsch algorithm to produce an optimal global alignment. This processing step ensured that each enzyme sequence shared the same length -- 805 amino acids -- and that the indexing of the sequences correlated to that of the human ortholog.
+
+Seven partial sequences of the ACE2 protein were also retrieved from the UniProt database; each was noted to be not susceptible to the SARS-CoV-2 spike protein. These partial sequences were aligned with the human sequence using the Smith-Waterman algorithm for local alignment.
+
+\subsection{Isolating Influential Mutations}
+
+The process used for identifying potentially influential mutations followed an iterative string comparison algorithm. For each acid in a negative (insusceptible) sequence, if the same acid did not exist in the same position of some positive (susceptible) sequence, the position and acid were recorded (see Algorithm 1). This process identified all mutations that appeared exclusively in negative sequences.
+
+\input{content/algorithm}
+
+The algorithm assigns weights to each mutation based on the total number of potential influential indices for each sequence; i.e, each mutation is considered more influential in a sequence with fewer total mutations. The mutations with weights that summed above a specified threshold were considered most influential.

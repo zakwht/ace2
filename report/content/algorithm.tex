@@ -1,0 +1,19 @@
+\begin{algorithm}[ht]
+  \SetAlgoLined
+  \For {each negative sequence $S^-$}{
+    \For {each i < length of $S^-$} {
+        $isInfluentialIndex \leftarrow$ True\;
+        \For {each positive sequence $S^+$}{
+            \If {$i^{th}$ acid in $S^-$ == $i^{th}$ acid in $S^+$}{
+            $isInfluentialIndex \leftarrow$ False\;
+            }
+        }
+        \If {isInfluentialIndex} {
+            \tcp{The mutation may be influential}
+            Record $i$, $i^{th}$ acid in $S^-$
+        }
+    }
+  }
+  \caption{Finding potential influential mutations} 
+%   \vspace{-32pt}
+\end{algorithm}

@@ -1,0 +1,45 @@
+\documentclass[sigplan]{acmart} % nonacm?
+\usepackage[ruled,vlined]{algorithm2e} % algorithms
+\usepackage{multirow} % tables
+\usepackage{caption} % control caption length
+
+
+
+% \usepackage[backend=biber,style=ieee]{biblatex} % bibliography
+\newcommand{\textcite}[1]{\citeauthor{#1} (\citeyear{#1})}
+\newcommand{\textcitecomma}[1]{\citeauthor{#1}, \citeyear{#1}}
+
+%% PREAMBLE
+% config
+% \addbibresource{references.bib} % references
+\bibliographystyle{IEEEtranN}
+\captionsetup{width=.475\textwidth}
+
+
+% metadata
+\title{Identifying Mutations in ACE2 That Influence Susceptibility to SARS-CoV-2}
+\author{Zak White}
+\email{zakerywhite@uvic.ca}
+\affiliation{
+\department{Department of Computer Science}
+\institution{University of Victoria}
+\city{Victoria}
+\state{BC}
+\country{Canada}
+}
+\date{November 26 2021}
+\setcopyright{rightsretained}
+
+%% BODY
+\begin{document}
+\input{sections/frontmatter}
+\maketitle
+\input{sections/introduction}
+\input{sections/methods}
+\input{sections/results}
+\input{sections/discussion}
+\input{sections/conclusion}
+\input{sections/backmatter}
+\end{document}
+
+% level it all
