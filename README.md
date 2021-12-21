@@ -1,6 +1,6 @@
 # Identifying Mutations in ACE2 That Influence Susceptibility to SARS-CoV-2
 
-[![License](https://img.shields.io/github/license/zakwht/universal-search-web-part)](/LICENSE.md)
+[![License](https://img.shields.io/github/license/zakwht/ace2)](/LICENSE.md)
 [![Report](https://img.shields.io/badge/report-2021-orange.svg)](/report/report.pdf)
 
 ### Abstract
